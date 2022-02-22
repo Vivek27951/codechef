@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,k;
+	    cin>>n>>k;
+	    int arr[k];
+	    for(int i=0;i<k;i++)
+	        cin>>arr[i];
+	    sort(arr,arr+k);
+	    int temp = 0;
+	    for(int i=0;i<k;i++)
+	    {
+	        int num = arr[i];
+	        for(int j=num;j>temp;j--)
+	            cout<<j<<" ";
+	        temp=num;
+	    }
+	    cout<<endl;
+	}
+	return 0;
+}
